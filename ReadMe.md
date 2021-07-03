@@ -1,15 +1,10 @@
----
-title: "OOPGrader: Model-Based Automatic Grading of Object Oriented Programming Assignments"
-author: "Duc Minh Le"
-output: 
-  bookdown::html_document2:
-  number_sections: TRUE
-  fig_caption: TRUE
----
-
 # OOPGrader: Model-Based Automatic Grading of Object Oriented Programming Assignments
 
-It takes a set of program files, mark their design and code and produce detailed marking reports for the programs. 
+| Author | Version | Date 
+| :--: | :--: | :--: |
+| [Duc Minh Le](mailto:lemduc@gmail.com) | 1.0 | 03 July 2021 |
+
+OOPGrader takes a set of program files, mark their design and code and produce detailed marking reports for the programs. 
 The tool is configurable with a range of parameters, including solution program model, test suite, and the marking function.
 A nice feature of the tool is that it comes with an Eclipse Plugin that makes it easy for teachers and students to use the tool. 
 Teachers use the plugin to grade programs, while students use it to validate the assignment model when working toward the final program design.
