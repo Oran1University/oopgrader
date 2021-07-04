@@ -53,7 +53,7 @@ It describes the compoments of our Java implementation of the OOPGrader's logic 
 
 First, a student prepares a requested Java program, packages it in a single ZIP-compressed file and submits to the LMS. If required, this program must use the design annotations that have been made available by the teacher on the LMS. Further, the submitted file needs to conform to a file naming pattern that includes the assignment number and the LMS username of the student. After the deadline of an attempt, the teacher download all the submitted files and extract them into an input folder (similar to the one used in the Eclipse plugin of the tool). At grading, the tool relies on the file naming pattern to find in the input folder all the program paths. These paths become the actual input for grading. The tool imports the same design annotations used by the programs to analyse and grade the program structure. The two outputs of the tool are handled as follows. The CSV-formatted grades file, which contains the user names and grades of all the submissions, are imported directly into the LMS's gradebook. The feedback files are returned to the students via a designated folder on the LMS. This could then initiate a resubmission cycle as explained in the paper.
 
-# Using OOPGrader with Eclipse IDE
+# Using OOPGrader with the Eclipse IDE
 To improve productivity in using our method, we propose to integrate both the grader and checker to an existing development environment. We discuss below an integration into the [Eclipse IDE](https://eclipse.org) – a popular development environment for Java programs.  The key benefit of this integration is that student and teacher do not need to leave the development environment in order to check and assess the programming works. The assessment is performed directly on the program model and code that are being developed in the IDE. This helps significantly reduce time and complexity.
 
 Eclipse's integration takes the form a **plugin component**, which is loaded automatically into the tool when it is run. There are **two plugin versions** of our method: one version, named ***student plugin***, executes the checker; the other version, named ***teacher plugin***, executes the grader. 
@@ -66,7 +66,7 @@ Both checker and grader functionalities are presented to the user in the "OOP Gr
 
 Figure 3 shows the GUI of the Eclipse IDE running the OOPChecker. The checker operates on a selected code package in the Package Explorer view and reports a feedback result for each class contained therein. There are two types of feedback: error and warning, which are reported in the Errors and Warnings sections (resp.) of the Problems tab in Eclipse. A feedback's content lists the rule number and the feedback message. Errors are visually alerted by having the class icon in the Project Explorer's view decorated with a red marker. For example, the feedback result shown in Figure 3 is for the Student class. The Problems tab lists 2 errors and 2 warnings concerning the class design. The two errors are reported for design rules 5 and 6, while the 2 warnings are reported for rules 3 and 4.
 
-## Using the grader component in Eclipse
+## Using the grader in Eclipse
 ![OOPGrader EclipsePlugin](resources/images/fig6-oopgrader-eclipse.png)
 <div align="center">Figure 6: The Eclipse plugin for OOPGrader: user uses the Project Explorer to choose the input elements and click the "Grade program" button to perform grading.</div>
 
