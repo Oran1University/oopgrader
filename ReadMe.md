@@ -60,6 +60,11 @@ Eclipse's integration takes the form a **plugin component**, which is loaded aut
 
 Both checker and grader functionalities are presented to the user in the "OOP Grader" menu and also conveniently through two tool bar buttons. 
 
+## Software example: `CourseMan`
+We illustrate the functionality of OOPGrader using a common software example about the course management (CourseMan) domain. A simplified version of this software was actually used in an assignment of a programming course in which OOPGrader was applied. 
+
+To ease testing in Eclipse, we include an Eclipse development project, called `CourseManGraderDist`, for this example. The entire project can be downloaded from the `examples` folder.
+
 ## Using the checker in Eclipse
 ![OOPChecker EclipsePlugin](resources/images/fig3-oopchecker-eclipse.png)
 <div align="center">Figure 3: The Eclipse plugin for OOPChecker: user selects a class and click the "Check program" button to perform design checking.</div>
@@ -70,7 +75,7 @@ Figure 3 shows the GUI of the Eclipse IDE running the OOPChecker. The checker op
 ![OOPGrader EclipsePlugin](resources/images/fig6-oopgrader-eclipse.png)
 <div align="center">Figure 6: The Eclipse plugin for OOPGrader: user uses the Project Explorer to choose the input elements and click the "Grade program" button to perform grading.</div>
 
-Figure 6 shows the GUI of the Eclipse IDE running the grader with a test grader example named `CourseManGraderTest`. This example will be explained later in the installation section.
+Figure 6 shows the GUI of the Eclipse IDE running the grader component on the `CourseManGraderDist` project.
 
 Basicall, user does not need to manually configure the required input elements. Instead, they use the Eclipse's Project Explorer to select the elements:
 1. **Marking function**: A Java class that defines marking scheme for the program
@@ -92,11 +97,17 @@ Once successfully completed, the dialog in Figure 7 is displayed to the user, no
 # Installation instructions
 
 ## Pre-requisites
-1. Eclipse IDE for Java Developers
+1. Java JDK version 1.8 or above
+   1. for checker: no further restrictions exist for the JDK version
+   2. for grader with the Eclipse IDE: there are no restrictions on the JDK used for the actual Java projects. However, the Eclipse IDE itself needs to be run with JDK 1.8. This can be achieved by adding the following configuration line to the `eclipse.ini` file (replacing `<path-to-jdk1.8-bin-directory>` with the actual path):
+
+`-vm 
+<path-to-jdk1.8-bin-directory>
+`
+2. Eclipse IDE for Java Developers
   - for checker: the latest version that has been tested is [2021-06-R](https://www.eclipse.org/downloads/packages/release/2021-06/r).
-  - for grader: the latest supported version is [2020-06-R](https://www.eclipse.org/downloads/packages/release/2020-06/r). This is the most recent version of Eclipse that supports JDK 1.8 as the executing VM. Versions later than this requires JDK version 11 or higher.
-  
-2. A suitable Eclipse plugin version:
+  - for grader: the latest supported version is [2020-06-R](https://www.eclipse.org/downloads/packages/release/2020-06/r). This is the most recent version of Eclipse that supports JDK 1.8 as the executing VM. Versions later than this requires JDK version 11 or higher. 
+3. A suitable Eclipse plugin version:
   - checker component only (for students): [checker-only plugin zip file](dist/eclipseplugin-oopchecker.zip)
   - bundled checker-and-grader component (for teachers): [bundled checker-and-grader plugin zip file](dist/eclipseplugin-oopgrader.zip)
 
@@ -115,8 +126,10 @@ The installation procedure for both Eclipse plugin versions are similar. In what
 ![Browse to the plugin archive file](resources/images/fig9-install-step1.png)
 <div align="center">Figure 9: Browse to the plugin archive file.</div>
 
+
 ![Untick the "Group items by category"](resources/images/fig10-install-step2.png)
 <div align="center">Figure 10: Untick the "Group items by category" to make the plugin component visible .</div>
+
 
 ![Tick to accept the license agreement](resources/images/fig11-install-step3.png)
 <div align="center">Figure 11: Tick to accept the license agreement.</div>
