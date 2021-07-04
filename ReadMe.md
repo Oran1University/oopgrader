@@ -104,6 +104,7 @@ Once successfully completed, the dialog in Figure 7 is displayed to the user, no
 `-vm 
 <path-to-jdk1.8-bin-directory>
 `
+
 2. Eclipse IDE for Java Developers
   - for checker: the latest version that has been tested is [2021-06-R](https://www.eclipse.org/downloads/packages/release/2021-06/r).
   - for grader: the latest supported version is [2020-06-R](https://www.eclipse.org/downloads/packages/release/2020-06/r). This is the most recent version of Eclipse that supports JDK 1.8 as the executing VM. Versions later than this requires JDK version 11 or higher. 
